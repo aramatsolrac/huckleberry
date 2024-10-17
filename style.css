@@ -1,6 +1,15 @@
+:root {
+  --border-color: hsl(0deg 0% 60%);
+  --strong-color: hsl(160deg 100% 30%);
+  --main-bg-color: hsl(0deg 0% 40%);
+  --card-bg-color: white;
+  --heading-bg-color: hsl(45deg 100% 50%);
+  --heading-border-color: hsl(45deg 100% 40%);
+}
+
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 html,
@@ -9,4 +18,65 @@ body {
   padding: 0;
 }
 
-/* Add styles here! */
+header {
+  border-bottom: 8px solid var(--border-color);
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2; /* equal to 120% */
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.5; /* equal to 150% */
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+strong {
+  color: var(--strong-color);
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.intro-chunk {
+  max-width: 415px; /* Constrain the width of the text to match the mockup */
+  padding-top: 96px;
+  padding-bottom: 64px;
+}
+
+main {
+  background-color: var(--main-bg-color);
+  padding: 64px 0;
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  padding: 24px;
+  margin: 0 -24px; /* Align text from the header and the card */
+  border-bottom: 8px solid var(--border-color);
+}
+
+.indented-heading {
+  width: fit-content;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin: 0;
+  margin-left: -32px; /* Indent the heading */
+  margin-top: -16px; /* Adjust for card padding: 24px (from .card) - 16px = 8px */
+  margin-bottom: 1rem;
+  padding: 16px 32px;
+  background-color: var(--heading-bg-color);
+  border-bottom: 8px solid var(--heading-border-color);
+}
